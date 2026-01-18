@@ -1,0 +1,15 @@
+#  Jacob Milham
+#  CIS 267
+options = ["O", "C", "P", "S", "N", "E"]
+
+
+def recieve_input() -> str:
+    return input(":")
+
+
+def valid(input_to_validate: str) -> bool:
+    if input_to_validate in options:
+        return True
+    else:
+        print("Not a valid option!")
+        return False
