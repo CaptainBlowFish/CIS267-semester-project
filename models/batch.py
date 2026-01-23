@@ -1,3 +1,5 @@
+#  Jacob Milham
+#  CIS 267
 from .record import Record
 
 

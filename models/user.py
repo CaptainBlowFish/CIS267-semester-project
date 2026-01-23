@@ -1,3 +1,5 @@
+#  Jacob Milham
+#  CIS 267
 class User:
     def __init__(self, user_code: str = "generic identifier",
                  users_name: str = "generic name", start_date: str = "1/23/26",

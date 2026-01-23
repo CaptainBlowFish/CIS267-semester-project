@@ -1,3 +1,5 @@
+#  Jacob Milham
+#  CIS 267
 from .batch import Batch
 from .user import User
 

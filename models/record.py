@@ -1,3 +1,5 @@
+#  Jacob Milham
+#  CIS 267
 ALLOWED_EVENTS = ["Sale", "Service", "Payroll", "Rent", "Tax"]
 
 
