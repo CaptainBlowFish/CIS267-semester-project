@@ -1,6 +1,6 @@
 #  Jacob Milham
 #  CIS 267
-options = ["O", "C", "P", "S", "N", "E"]
+options = ["O", "C", "P", "S", "N", "E", "M"]
 
 
 def recieve_input() -> str:
