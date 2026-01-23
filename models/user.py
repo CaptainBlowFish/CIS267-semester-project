@@ -1,13 +1,15 @@
 class User:
-    def __init__(self, user_code: str = "generic identifier", users_name: str = "generic name", start_date: str = "1/23/26", end_date = None) -> None:
+    def __init__(self, user_code: str = "generic identifier",
+                 users_name: str = "generic name", start_date: str = "1/23/26",
+                 end_date=None) -> None:
         """summary_
 
         Args:
-            user_code (str, optional): _description_. 
+            user_code (str, optional): _description_.
             Defaults to "generic identifier".
-            users_name (str, optional): _description_. 
+            users_name (str, optional): _description_.
             Defaults to "generic name".
-            end_date (None or str, optional): _description_. Defaults to None. 
+            end_date (None or str, optional): _description_. Defaults to None.
             If it is None authorization is still active
         """
         self.user_code = user_code

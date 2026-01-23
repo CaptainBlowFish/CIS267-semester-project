@@ -1,5 +1,5 @@
-from batch import Batch
-from user import User
+from .batch import Batch
+from .user import User
 
 
 class Company:
@@ -7,6 +7,7 @@ class Company:
         self.name = name
         self.description = description
         self.batches = []
+        self.active = active
         for i in range(5):
             self.batches.append(Batch("F"+str(i), "10/30/2026"))
         self.users = []
