@@ -1,5 +1,6 @@
 #  Jacob Milham
 #  CIS 267
+#  Spring 2026
 options = ["O", "C", "P", "S", "N", "E", "M"]
 
 
