@@ -2,10 +2,10 @@
 #  CIS 267
 #  Spring 2026
 import menu
-from models.batch import Batch
-from models.company import Company
-from models.record import Record
-from models.user import User
+from models import batch
+from models import company
+from models import record
+from models import user
 
 
 def open_company():
@@ -18,7 +18,7 @@ def create_batch():
     print("create batch")
     name = input("File name")
     date = input("date")
-    temp = Batch(name, date)
+    temp = batch.Batch(name, date)
     return temp
 
 
@@ -30,7 +30,7 @@ def save_company():
     print("S:save company")
 
 
-def new_company() -> Company:
+def new_company() -> company.Company:
     print("New company")
     name = input("Company name:")
     description = input("Company Description:")
@@ -38,12 +38,36 @@ def new_company() -> Company:
         active = True
     else:
         active = False
-    temp = Company(name, description, active)
+    temp = company.Company(name, description, active)
     return temp
 
 
 def manage_users():
-    print("M:manage users")
+    print("N:New User")
+    print("M:Modify User")
+    print("D:Delete User")
+    print("E:Exit")
+
+    quit = False
+    while not quit:
+        selection = menu.recieve_input()
+        if selection == "N":
+            print("Enter user type. User, Admin, Auditor")
+            selection = menu.recieve_input()
+            if selection == "USER":
+                return user.User()
+            elif selection == "ADMIN":
+                return user.Admin()
+            elif selection == "AUDITOR":
+                return user.Auditor()
+            else:
+                print("Unavailable option")
+        elif selection == "M":
+            pass
+        elif selection == "D":
+            pass
+        elif selection == "E":
+            quit = True
 
 
 def exit(unsaved_data: bool) -> bool:
@@ -73,7 +97,7 @@ while not quit:
         elif selection == "E":
             quit = exit(unsaved_data)
         elif selection == "M":
-            if current_company == None:
+            if current_company is None:
                 print("No company currently is selected")
             else:
-                manage_users()
+                print(manage_users())

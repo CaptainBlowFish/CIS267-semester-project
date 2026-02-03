@@ -5,7 +5,7 @@ options = ["O", "C", "P", "S", "N", "E", "M"]
 
 
 def recieve_input() -> str:
-    return input(":")
+    return input(":").upper()
 
 
 def valid(input_to_validate: str) -> bool:

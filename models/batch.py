@@ -1,7 +1,7 @@
 #  Jacob Milham
 #  CIS 267
 #  Spring 2026
-from .record import Record
+import record
 
 
 class Batch:
@@ -10,4 +10,4 @@ class Batch:
         self.date = date
         self.records = []
         for i in range(5):
-            self.records.append(Record("10/30/2026", "Sale", 300.99, "Jacob"))
+            self.records.append(record.SaleRecord("10/30/2026", 300.99, "Jacob", True))
