@@ -21,7 +21,8 @@ class UserBase:
         self.end_date = end_date
 
     def __str__(self) -> str:
-        output = f"user_code: {self.user_code}\nusers_name: {self.users_name}\nstart_date: {self.start_date}\nend_date: {self.end_date}"
+        output = f"user_code: {self.user_code}\nusers_name: {self.users_name} \
+                \nstart_date: {self.start_date}\nend_date: {self.end_date}"
         return output
 
 

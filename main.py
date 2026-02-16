@@ -81,6 +81,11 @@ def exit(unsaved_data: bool) -> bool:
 quit = False
 unsaved_data = False
 current_company = None
+
+print("The current available options are:")
+for option in menu.options:
+    print(option, end=", ")
+
 while not quit:
     selection = menu.recieve_input()
     if menu.valid(selection):

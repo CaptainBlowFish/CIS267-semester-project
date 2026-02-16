@@ -50,7 +50,7 @@ class TaxRecord(RecordBase):
     def __init__(self, time_stamp: str, dollar_value: float,
                  authorizor: str, tax_type: str) -> None:
         super().__init__(time_stamp, dollar_value, authorizor)
-        if type in self.TAX_TYPES:
-            self.type = type
+        if tax_type in self.TAX_TYPES:
+            self.type = tax_type
         else:
             raise RuntimeError("Not allowed tax tyoe")
