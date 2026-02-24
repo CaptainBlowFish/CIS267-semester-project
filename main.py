@@ -4,7 +4,7 @@
 import menu
 from models import batch
 from models import company
-from models import record
+# from models import record
 from models import user
 
 
