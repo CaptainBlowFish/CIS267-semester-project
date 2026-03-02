@@ -2,7 +2,7 @@
 #  CIS 267
 #  Spring 2026
 from datetime import datetime
-from . import record
+import record
 
 
 class Node:

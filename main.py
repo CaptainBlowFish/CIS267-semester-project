@@ -3,10 +3,7 @@
 #  Spring 2026
 from datetime import datetime
 import menu
-from models import batch
-from models import company
-# from models import record
-from models import user
+import models
 
 
 def open_company():
@@ -22,7 +19,7 @@ def create_batch():
     date = datetime(int(input("year:")),
                     int(input("month:")),
                     int(input("day")))
-    temp = batch.Batch(name, date)
+    temp = models.batch.Batch(name, date)
     return temp
 
 
@@ -34,7 +31,7 @@ def save_company():
     print("S:save company")
 
 
-def new_company() -> company.Company:
+def new_company() -> models.company.Company:
     print("New company")
     name = input("Company name:")
     description = input("Company Description:")
@@ -42,7 +39,7 @@ def new_company() -> company.Company:
         active = True
     else:
         active = False
-    temp = company.Company(name, description, active)
+    temp = models.company.Company(name, description, active)
     return temp
 
 
@@ -59,11 +56,11 @@ def manage_users():
             print("Enter user type. User, Admin, Auditor")
             selection = menu.recieve_input()
             if selection == "USER":
-                return user.User()
+                return models.user.User()
             elif selection == "ADMIN":
-                return user.Admin()
+                return models.user.Admin()
             elif selection == "AUDITOR":
-                return user.Auditor()
+                return models.user.Auditor()
             else:
                 print("Unavailable option")
         elif selection == "M":
