@@ -1,9 +1,13 @@
 #  Jacob Milham
 #  CIS 267
 #  Spring 2026
+from datetime import datetime
+
+
 class UserBase:
     def __init__(self, user_code: str = "generic identifier",
-                 users_name: str = "generic name", start_date: str = "1/23/26",
+                 users_name: str = "generic name",
+                 start_date: datetime = datetime(2026, 1, 23),
                  end_date=None) -> None:
         """summary_
 
@@ -28,21 +32,24 @@ class UserBase:
 
 class User(UserBase):
     def __init__(self, user_code: str = "User",
-                 users_name: str = "User", start_date: str = "1/23/26",
+                 users_name: str = "User",
+                 start_date: datetime = datetime(2026, 1, 23),
                  end_date=None) -> None:
         super().__init__(user_code, users_name, start_date, end_date)
 
 
 class Admin(UserBase):
     def __init__(self, user_code: str = "Admin",
-                 users_name: str = "Admin", start_date: str = "1/23/26",
+                 users_name: str = "Admin",
+                 start_date: datetime = datetime(2026, 1, 23),
                  end_date=None) -> None:
         super().__init__(user_code, users_name, start_date, end_date)
 
 
 class Auditor(UserBase):
     def __init__(self, user_code: str = "Auditor",
-                 users_name: str = "Auditor", start_date: str = "1/23/26",
+                 users_name: str = "Auditor",
+                 start_date: datetime = datetime(2026, 1, 23),
                  end_date=None) -> None:
         super().__init__(user_code, users_name, start_date, end_date)
 

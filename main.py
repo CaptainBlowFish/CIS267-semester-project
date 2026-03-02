@@ -1,6 +1,7 @@
 #  Jacob Milham
 #  CIS 267
 #  Spring 2026
+from datetime import datetime
 import menu
 from models import batch
 from models import company
@@ -16,8 +17,11 @@ def open_company():
 
 def create_batch():
     print("create batch")
-    name = input("File name")
-    date = input("date")
+    name = input("File name:")
+    print("date")
+    date = datetime(int(input("year:")),
+                    int(input("month:")),
+                    int(input("day")))
     temp = batch.Batch(name, date)
     return temp
 

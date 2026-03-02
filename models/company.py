@@ -3,6 +3,7 @@
 #  Spring 2026
 from .batch import Batch
 from .user import User
+from datetime import datetime
 
 
 class Company:
@@ -12,7 +13,7 @@ class Company:
         self.batches = []
         self.active = active
         for i in range(5):
-            self.batches.append(Batch("F"+str(i), "10/30/2026"))
+            self.batches.append(Batch("F"+str(i), datetime(2026, 3, 2)))
         self.users = []
         for i in range(5):
             self.users.append(User())
