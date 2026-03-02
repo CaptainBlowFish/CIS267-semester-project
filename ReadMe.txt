@@ -2,4 +2,4 @@
 #  CIS 267
 #  Spring 2026
 
-No notes
+Everything runs on my computer.
