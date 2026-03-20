@@ -1,9 +1,6 @@
 #  Jacob Milham
 #  CIS 267
 #  Spring 2026
-# Source - https://stackoverflow.com/a/16985066
-# Posted by Aya, modified by community. See post 'Timeline' for change history
-# Retrieved 2026-03-02, License - CC BY-SA 4.0
 
 from datetime import datetime, date
 import batch as b
@@ -83,7 +80,8 @@ class BatchTree:
             return None
         return current.data[1]
 
-    def range_search(self, start_date: date | None, end_date: date | None) -> list[b.Batch]:
+    def range_search(self, start_date: date | None,
+                     end_date: date | None) -> list[b.Batch]:
         order = inorder(self.root)
         begining_slice = 0
         ending_slice = len(order)

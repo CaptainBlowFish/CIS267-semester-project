@@ -3,7 +3,7 @@
 #  Spring 2026
 from datetime import datetime
 import menu
-import models
+from models import batch, company, user
 
 
 def open_company():
@@ -19,7 +19,7 @@ def create_batch():
     date = datetime(int(input("year:")),
                     int(input("month:")),
                     int(input("day")))
-    temp = models.batch.Batch(name, date)
+    temp = batch.Batch(name, date)
     return temp
 
 
@@ -27,11 +27,12 @@ def pick_batch():
     print("P:pick batch")
 
 
-def save_company():
+def save_company() -> bool:
     print("S:save company")
+    return True
 
 
-def new_company() -> models.company.Company:
+def new_company() -> company.Company:
     print("New company")
     name = input("Company name:")
     description = input("Company Description:")
@@ -39,7 +40,7 @@ def new_company() -> models.company.Company:
         active = True
     else:
         active = False
-    temp = models.company.Company(name, description, active)
+    temp = company.Company(name, description, active)
     return temp
 
 
@@ -56,11 +57,11 @@ def manage_users():
             print("Enter user type. User, Admin, Auditor")
             selection = menu.recieve_input()
             if selection == "USER":
-                return models.user.User()
+                return user.User()
             elif selection == "ADMIN":
-                return models.user.Admin()
+                return user.Admin()
             elif selection == "AUDITOR":
-                return models.user.Auditor()
+                return user.Auditor()
             else:
                 print("Unavailable option")
         elif selection == "M":
@@ -97,7 +98,7 @@ while not quit:
         elif selection == "P":
             pick_batch()
         elif selection == "S":
-            save_company()
+            unsaved_data = save_company()
         elif selection == "N":
             current_company = new_company()
         elif selection == "E":
