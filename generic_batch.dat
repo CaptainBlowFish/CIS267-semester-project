@@ -1,0 +1,7 @@
+generic_batch.dat	2026-03-17 00:00:00
+RecordBase	2026-03-17 00:00:00	2.0	Jacob
+SaleRecord	False	2026-03-17 00:00:00	12.6	Jacob
+ServiceRecord	True	2026-03-17 00:00:00	90.2	Jacob
+PayrollRecord	Hourly	2026-03-17 00:00:00	15.03	Jacob
+RentRecord	False	2026-03-17 00:00:00	22.07	Jacob
+TaxRecord	Sales	2026-03-17 00:00:00	14.15	Jacob
