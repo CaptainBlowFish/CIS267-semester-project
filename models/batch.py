@@ -2,7 +2,6 @@
 #  CIS 267
 #  Spring 2026
 from datetime import datetime
-# import record
 
 
 class Node:
@@ -39,11 +38,14 @@ class LinkedList:
 
     def append(self, data):
         """adds a new node at the last position of the linked list."""
-        temp = self.first_node
-        while temp.next is not None:
-            temp = temp.next
-        temp.next = Node(data)
-        self.__length += 1
+        if self.first_node is None:
+            self.first_node = Node(data)
+        else:
+            temp = self.first_node
+            while temp.next is not None:
+                temp = temp.next
+            temp.next = Node(data)
+            self.__length += 1
 
     def insert(self, data, ID):
         """Inserts a new node after the first node with the given ID."""
@@ -99,6 +101,15 @@ class LinkedList:
             curr = curr.next
         return curr.data  # type: ignore
 
+    def traverse(self) -> list:
+        return_list = []
+        temp = self.first_node
+        while temp is not None:
+            return_list.append(temp.data)
+            temp = temp.next
+
+        return return_list
+
 
 class Batch:
     def __init__(self, file_name: str, date: datetime) -> None:
@@ -135,3 +146,10 @@ class Batch:
 
     def find_record(self, record_ID):
         return self.records.find(record_ID)
+
+
+if __name__ == "__main__":
+    ll = LinkedList()
+    for i in range(10):
+        ll.append(i)
+    print(ll.traverse())
