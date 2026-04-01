@@ -2,4 +2,4 @@
 #  CIS 267
 #  Spring 2026
 
-Everything runs on my computer.
+The records in the batch object have a sort method. And a menu option for that.

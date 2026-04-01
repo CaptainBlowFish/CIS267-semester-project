@@ -23,13 +23,17 @@ def create_batch():
     return temp
 
 
-def pick_batch():
-    print("P:pick batch")
+def pick_batch() -> batch.Batch | bool:
+    return False
 
 
 def save_company() -> bool:
     print("S:save company")
     return True
+
+
+def sort_batch(batch_to_sort: batch.Batch) -> None:
+    batch_to_sort.sort_records()
 
 
 def new_company() -> company.Company:
