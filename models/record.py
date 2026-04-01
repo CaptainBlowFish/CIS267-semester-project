@@ -17,6 +17,21 @@ class RecordBase:
         ret_str += f"authorizor: {self.authorizor}"
         return ret_str
 
+    def __eq__(self, other) -> bool:
+        return self.time_stamp == other.time_stamp
+
+    def __ne__(self, other) -> bool:
+        return not self.__eq__(other)
+
+    def __lt__(self, other) -> bool:
+        return self.time_stamp < other.time_stamp
+
+    def __gt__(self, other) -> bool:
+        return self.time_stamp > other.time_stamp
+
+    def __ge__(self, other) -> bool:
+        return self.__gt__(other) and self.__ge__(other)
+
 
 class SaleRecord(RecordBase):
     def __init__(self, time_stamp: datetime, dollar_value: float,
