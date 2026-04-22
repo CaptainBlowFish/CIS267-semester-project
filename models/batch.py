@@ -217,6 +217,7 @@ class Batch:
     def __ge__(self, other) -> bool:
         return self.__gt__(other) and self.__ge__(other)
 
+
 if __name__ == "__main__":
     ll = LinkedList()
     for i in [1, 3, 4, 5, 2, 3, 4, 2, 5, 7, 10, 2]:

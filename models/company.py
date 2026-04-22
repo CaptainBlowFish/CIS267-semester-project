@@ -33,9 +33,9 @@ class Company:
         self.active = active
         for i in range(5):
             self.__batches.append(Batch("F"+str(i),
-                                      datetime(2026,
-                                               3,
-                                               random.randint(1, 31))))
+                                        datetime(2026,
+                                        3,
+                                        random.randint(1, 31))))
         self.users = []
         for i in range(5):
             self.users.append(User())
@@ -61,12 +61,12 @@ class Company:
 
 
 if __name__ == "__main__":
-    l = [random.randint(0, 10) for i in range(10)]
+    random_list = [random.randint(0, 10) for i in range(10)]
     j = []
     print("unsorted:")
-    print(l)
+    print(random_list)
 
-    for i in l:
+    for i in random_list:
         j.insert(_binary_search(j, i, 0, len(j)-1), i)
     print("sorted")
     print(j)
